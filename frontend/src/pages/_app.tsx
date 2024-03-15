@@ -1,4 +1,3 @@
-import "@/styles/style.scss";
 import { SharedStateProvider } from "@/utils/store";
 import PlausibleProvider from "next-plausible";
 import type { AppProps } from "next/app";

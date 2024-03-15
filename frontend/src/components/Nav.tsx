@@ -1,4 +1,3 @@
-import styles from "../styles/styles.module.css";
 import { useSharedState } from "@/utils/store";
 import Link from "next/link";
 import styled from "styled-components";
@@ -42,7 +41,7 @@ export function Nav() {
       <div style={{ display: "flex", gap: "10px" }}>
         {user && (
           <button
-            className={styles.connectButton}
+            className={`text-gray-500 hover:text-gray-900`}
             style={{ display: "flex", gap: "10px", alignItems: "center" }}
           >
             <img

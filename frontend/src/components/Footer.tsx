@@ -1,5 +1,4 @@
 import { GithubIcon } from "@/assets/icons";
-import { mq } from "@/styles/breakpoints";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -8,11 +7,6 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
-
-  @media ${mq.sm.max} {
-    gap: 0.75rem;
-    flex-direction: column-reverse;
-  }
 `;
 
 export const Links = styled.div`
