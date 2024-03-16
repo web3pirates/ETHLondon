@@ -6,7 +6,7 @@ const connectDB = async () => {
   console.log(process.env.DB_PASSWORD);
   try {
     const conn = await mongoose.connect(
-      `mongodb+srv://ethlondon:${process.env.DB_PASSWORD}@cluster0.gwcd6sj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+      `mongodb+srv://ethlondon:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/?retryWrites=true&w=majority&appName=Cluster0`
     );
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error: any) {
