@@ -1,9 +1,7 @@
 import { storageRegistryAbi } from "../../../../abi/StorageRegistry";
 import connectDB from "@/db";
+import { sponsorGasFees } from "@/safe";
 import type { NextApiRequest, NextApiResponse } from "next";
-
-// Adjust the import path as necessary
-// import Quest from '../../../models/quest'; // Uncomment and adjust the path as necessary
 
 export default async function handleExecuteQuest(
   req: NextApiRequest,
@@ -15,6 +13,7 @@ export default async function handleExecuteQuest(
     try {
       const { id } = req.query; // In Next.js API routes, path parameters are accessed via req.query
 
+      //const safe = await sponsorGasFees();
       // const quest = await Quest.findById(id);
 
       // if (!quest) {
