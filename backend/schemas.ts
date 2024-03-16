@@ -22,5 +22,6 @@ export const createQuestSchema = z.object({
         (value) => typeof value === "string"
       ) as [string, ...string[]]
     ),
+    owner: z.string().min(1, "Owner is required"),
   }),
 });

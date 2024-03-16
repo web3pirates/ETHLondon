@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
-import { handleFarcasterLogin } from "./controller";
-import { farcasterLoginSchema } from "./schemas";
+import { handleCreateQuest, handleFarcasterLogin } from "./controller";
+import { createQuestSchema, farcasterLoginSchema } from "./schemas";
 import { validate } from "./middleware";
 import connectDB from "./db";
 
