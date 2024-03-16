@@ -23,7 +23,7 @@ const Link = styled.a`
 
 export function Footer() {
   return (
-    <Wrapper style={{ marginBottom: 0 }}>
+    <Wrapper style={{ bottom: 0 }}>
       <Links>
         <Link href="#" target="_blank">
           Carlo
