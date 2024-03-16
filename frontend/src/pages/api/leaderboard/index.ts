@@ -12,8 +12,8 @@ export default async function handler(
     <html>
       <head>
       <meta property="fc:frame" content="vNext">
-      <meta property="og:image" content="https://www.michelesottocasa.it/assets/images/IMG_4532.jpeg">
-      <meta property="fc:frame:image" content="https://www.michelesottocasa.it/assets/images/IMG_4532.jpeg">
+      <meta property="og:image" content="https://framenchips.s3.eu-west-1.amazonaws.com/Leaderboard+APE.jpg">
+      <meta property="fc:frame:image" content="https://framenchips.s3.eu-west-1.amazonaws.com/Leaderboard+APE.jpg">
       <meta property="fc:frame:image:aspect_ratio" content="1:1">
       <meta property="fc:frame:state" content="%7B%22counter%22%3A1%7D">
       <meta property="fc:frame:button:1" content="Complete task link">
