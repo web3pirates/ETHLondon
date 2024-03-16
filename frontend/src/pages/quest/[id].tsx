@@ -32,7 +32,7 @@ export default function Page() {
             },
           ]}
           image={{
-            src: "https://zizzamia.xyz/park-3.png",
+            src: "https://framenchips.s3.eu-west-1.amazonaws.com/apecoin-transfer-cover.jpg",
             aspectRatio: "1.91:1",
           }}
           state={{
