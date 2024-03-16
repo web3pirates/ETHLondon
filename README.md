@@ -1,4 +1,4 @@
-# EthGlobal London 2024 Project
+# Frame&Chips - EthGlobal London 2024 Project
 
 ## Getting Started
 
