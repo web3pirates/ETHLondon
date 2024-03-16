@@ -5,6 +5,7 @@ interface Quest extends Document {
   title: string;
   description: string;
   image: string;
+  template: QuestTemplate;
 }
 
 export enum QuestTemplate {
@@ -38,7 +39,7 @@ const questSchema = new mongoose.Schema({
   },
   template: {
     type: String,
-    enum: [Object.values(QuestTemplate)],
+    enum: Object.values(QuestTemplate),
     default: QuestTemplate.ONCHAIN_EVENT,
   },
 });

@@ -12,8 +12,11 @@
     "prettier:fix": "prettier --write src/**/*"
   },
   "dependencies": {
+    "@coinbase/onchainkit": "^0.10.2",
+    "@tanstack/react-query": "^5.28.4",
     "@types/uuid": "^9.0.7",
-    "next": "13.4.1",
+    "mongoose": "^8.2.2",
+    "next": "^13.4.1",
     "next-plausible": "^3.7.2",
     "openai": "^4.24.7",
     "postcss-cli": "^11.0.0",
@@ -26,7 +29,8 @@
     "tailwind": "^4.0.0",
     "use-async-memo": "^1.2.5",
     "uuid": "^9.0.1",
-    "viem": "^1.5.3"
+    "viem": "^1.5.3",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
