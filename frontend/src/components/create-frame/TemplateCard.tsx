@@ -13,7 +13,7 @@ export default function TemplateCard(props: Props) {
     logo = <Rocket className="fill-[#136fe8]" />,
   } = props;
   return (
-    <div className="w-[308px] h-[197px] p-[25px] bg-[#012b73] rounded-[10px] shadow flex-col justify-center items-start gap-5 inline-flex">
+    <div className="w-[308px] h-[100%] p-[25px] bg-[#012b73] rounded-[10px] shadow flex-col justify-center items-start gap-5 inline-flex">
       <div className="self-stretch justify-end items-start gap-2.5 inline-flex">
         {logo}
       </div>

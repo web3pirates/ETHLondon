@@ -1,37 +1,48 @@
+import apecoin from "../../../public/images/apecoin.png";
+import chain from "../../../public/images/chain.png";
+import nouns from "../../../public/images/nouns2.png";
+import usdc from "../../../public/images/usdc.png";
 import TemplateCard from "./TemplateCard";
 import NounsLogo from "@/assets/icons/NounsLogo";
-import apecoin from '../../../public/images/apecoin.png'
-import nouns from '../../../public/images/nouns2.png'
-import chain from '../../../public/images/chain.png'
-import usdc from '../../../public/images/usdc.png'
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
 
 const _CARDS = [
   {
-    title: "NOUNS BID",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={nouns} alt='chain' width={100} height={100}/>,
-    link: "/create/nouns-bid",
-  },
-  {
-    title: "ON-CHAIN EVENTS",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={chain} alt='chain' width={100} height={100} className="rounded-full"/>,
-    link: "/create/on-chain-event",
+    title: "STAKE APECOIN",
+    description:
+      "Customize the quest with an on chain event. Users will stkae ApeCoin directly on Warpcast",
+    logo: <Image src={apecoin} alt="chain" width={100} height={100} />,
+    link: "/create/hold-nfts",
   },
   {
     title: "MINIMUM ERC20 BALANCE",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={usdc} alt='chain' width={100} height={100}/>,
+    description:
+      "Customize the quest to verify if users hold a minimum ERC20 balance",
+    logo: <Image src={usdc} alt="chain" width={100} height={100} />,
     link: "/create/minimum-erc20-balance",
   },
   {
-    title: "HOLD NFTS",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={apecoin} alt='chain' width={100} height={100}/>,
-    link: "/create/hold-nfts",
+    title: "ON-CHAIN EVENTS",
+    description:
+      "Customize the quest to verify if users completed a specified on-chain event",
+    logo: (
+      <Image
+        src={chain}
+        alt="chain"
+        width={100}
+        height={100}
+        className="rounded-full"
+      />
+    ),
+    link: "/create/on-chain-event",
+  },
+  {
+    title: "HOLD NFT",
+    description: "Customize the quest to verify if users hold a specific NFT",
+    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
+    link: "/create/nouns-bid",
   },
 ];
 
@@ -39,11 +50,11 @@ interface Props {
   className?: string;
 }
 
-export default function Cards(props: Props) { 
+export default function Cards(props: Props) {
   const { className } = props;
   return (
     <>
-      <div className="mt-8 p-4 flex justify-center &{calssName}">
+      <div className={`mt-8 p-4 flex justify-center ${className}`}>
         <div className="grid grid-rows-2 grid-flow-col gap-8">
           {_CARDS.map((card) => (
             <Link
