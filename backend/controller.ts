@@ -1,9 +1,11 @@
 import { Request, Response } from "express";
+import User from "./models/user";
 
-export const handleFarcasterLogin = (req: Request, res: Response): void => {
-  const { name, email } = req.body;
-
-  console.log({ name, email });
-
-  res.status(200).send({ message: "Successfully logged in" });
-};
+export async function handleFarcasterLogin(req: Request, res: Response) {
+  try {
+    const user = await User.create(req.body);
+    res.json(user);
+  } catch (error: any) {
+    res.status(400).send(error.message);
+  }
+}
