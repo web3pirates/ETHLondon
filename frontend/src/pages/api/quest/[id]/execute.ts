@@ -9,6 +9,7 @@ export default async function handleExecuteQuest(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log("hi there");
   if (req.method === "POST") {
     await connectDB();
     try {
