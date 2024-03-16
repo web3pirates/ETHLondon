@@ -1,6 +1,7 @@
 import { Footer } from "./Footer";
 import { Nav } from "./Nav";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 interface Props {
   children?: React.ReactNode;
@@ -14,6 +15,7 @@ export default function Layout(props: Props) {
   return (
     <div id="layout" className={`bg-[#f4f7fa] min-h-screen w-screen `}>
       <Nav />
+      <Toaster position="bottom-right" />
       <main id="main" className={mainClass}>
         {children}
       </main>
