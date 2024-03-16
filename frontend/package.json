@@ -12,6 +12,7 @@
     "prettier:fix": "prettier --write src/**/*"
   },
   "dependencies": {
+    "@farcaster/auth-kit": "^0.2.1",
     "@types/uuid": "^9.0.7",
     "next": "13.4.1",
     "next-plausible": "^3.7.2",

@@ -1,8 +1,11 @@
 import { Footer } from "../components/Footer";
 import { Nav } from "../components/Nav";
 import { mq } from "../styles/breakpoints";
+import { SignInButton } from "@farcaster/auth-kit";
+import { useProfile } from "@farcaster/auth-kit";
+import "@farcaster/auth-kit/styles.css";
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // -----------------------------------------------
@@ -27,6 +30,13 @@ export const Layout = styled.div`
 // -----------------------------------------------
 
 export default function Home() {
+  const { isAuthenticated, profile } = useProfile();
+  const [hide, setHide] = useState(false);
+
+  const hideButton = () => {
+    setHide(true);
+  };
+
   return (
     <>
       <Head>
@@ -40,6 +50,17 @@ export default function Home() {
         <h1>ETHGlobal London Project</h1>
         <br />
         <Footer />
+        {!hide && <SignInButton onSignOut={hideButton} />}
+
+        <div>
+          {isAuthenticated ? (
+            <p>
+              Hello, {profile.username}! Your fid is: {profile.fid}
+            </p>
+          ) : (
+            <p>You're not signed in.</p>
+          )}
+        </div>
       </Layout>
     </>
   );
