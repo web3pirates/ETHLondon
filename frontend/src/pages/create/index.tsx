@@ -1,5 +1,4 @@
-import FrameForm from "@/components/FrameForm";
-import Layout from "@/components/Layout";
+import FrameBuilder from "@/components/create-frame/FrameBuilder";
 import Head from "next/head";
 import React from "react";
 
@@ -10,11 +9,8 @@ export default function Home() {
         <title>Create frame</title>
       </Head>
 
-      <Layout>
-        <h1>Create your frame</h1>
-
-        <FrameForm />
-      </Layout>
+      <h1>Create your frame</h1>
+      <FrameBuilder step="template-selection" />
     </>
   );
 }
