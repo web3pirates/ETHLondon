@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8000;
 connectDB();
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript with Express!");
+  res.send("Frame&Chips Backend is working!");
 });
 
 app.listen(PORT, () => {
@@ -23,4 +23,4 @@ app.post(
   handleFarcasterLogin
 );
 
-// app.post("/quest", validate(createQuestSchema), handleCreateQuest);
+app.post("/quest", validate(createQuestSchema), handleCreateQuest);

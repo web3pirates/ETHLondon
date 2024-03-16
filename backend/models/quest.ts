@@ -6,6 +6,13 @@ interface Quest extends Document {
   image: string;
 }
 
+export enum QuestTemplate {
+  ONCHAIN_EVENT = "onchain_event",
+  NFT_HOLDING = "nft_holding",
+  ERC20_HOLDING = "erc20_holding",
+  NOUNS = "nouns",
+}
+
 const questSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -23,6 +30,11 @@ const questSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: "User",
+  },
+  template: {
+    type: String,
+    enum: [Object.values(QuestTemplate)],
+    default: QuestTemplate.ONCHAIN_EVENT,
   },
 });
 
