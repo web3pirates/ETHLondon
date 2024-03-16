@@ -1,3 +1,4 @@
+import { ApeStakeABI } from "@/abi/ApeStake";
 import { storageRegistryAbi } from "../../../../abi/StorageRegistry";
 import connectDB from "@/db";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -21,6 +22,21 @@ export default async function handleExecuteQuest(
       //   return res.status(400).json({ error: "Quest does not exist" });
       // }
 
+
+      /*Apecoin staking*/
+      const transactionData = {
+        chainId: "1",
+        method: "depositSelfAPeCoin(uint256 _amount)",
+        params: {
+          abi : ApeStakeABI,
+          to : "0x5954aB967Bc958940b7EB73ee84797Dc8a2AFbb9",
+          //data : "",
+          value : "1000000000000000000",
+        }
+      };
+
+      
+      /*
       const transactionData = {
         chainId: "eip155:10",
         method: "eth_sendTransaction",
@@ -30,7 +46,7 @@ export default async function handleExecuteQuest(
           data: "0x783a112b0000000000000000000000000000000000000000000000000000000000000e250000000000000000000000000000000000000000000000000000000000000001",
           value: "984316556204476",
         },
-      };
+      };*/
 
       res.status(200).json(transactionData);
     } catch (error: any) {
