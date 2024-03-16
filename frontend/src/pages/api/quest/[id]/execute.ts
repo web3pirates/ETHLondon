@@ -1,6 +1,5 @@
-import { ApeTokenABI } from "@/abi/ApeToken";
 import { storageRegistryAbi } from "../../../../abi/StorageRegistry";
-import { ApeStakeABI } from "@/abi/ApeStake";
+import { ApeTokenABI } from "@/abi/ApeToken";
 import connectDB from "@/db";
 import type { NextApiRequest, NextApiResponse } from "next";
 
