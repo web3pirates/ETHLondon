@@ -1,11 +1,16 @@
 import express, { Request, Response } from "express";
-import { handleCreateQuest, handleFarcasterLogin } from "./controller";
+import {
+  handleCreateQuest,
+  handleFarcasterLogin,
+  handleExecuteQuest,
+} from "./controller";
 import { createQuestSchema, farcasterLoginSchema } from "./schemas";
 import { validate } from "./middleware";
 import connectDB from "./db";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+app.use(express.json());
 
 connectDB();
 
@@ -18,7 +23,7 @@ app.listen(PORT, () => {
 });
 
 app.post(
-  "farcaster-login",
+  "/farcaster-login",
   validate(farcasterLoginSchema),
   handleFarcasterLogin
 );
