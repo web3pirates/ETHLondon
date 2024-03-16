@@ -27,8 +27,8 @@ export default function Page() {
             },
             {
               action: "link",
-              label: "Link to project website",
-              target: "https://www.google.com",
+              label: "Apecoin website",
+              target: "https://apecoin.com/",
             },
           ]}
           image={{
