@@ -24,3 +24,5 @@ app.post(
 );
 
 app.post("/quest", validate(createQuestSchema), handleCreateQuest);
+
+app.post("/quest/:id/execute", handleExecuteQuest);

@@ -40,3 +40,27 @@ export async function handleCreateQuest(req: Request, res: Response) {
       );
   }
 }
+
+export async function handleExecuteQuest(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+
+    const quest = await Quest.findById(id);
+
+    if (!quest) {
+      return res.status(400).send("Quest does not exist");
+    }
+
+    const transactionData = {};
+
+    // Execute the quest
+    res.json(transactionData);
+  } catch (error: any) {
+    res
+      .status(400)
+      .send(
+        error.message ||
+          "An error occurred while executing the quest, please try again"
+      );
+  }
+}
