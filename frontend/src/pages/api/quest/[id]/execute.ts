@@ -24,7 +24,7 @@ export default async function handleExecuteQuest(
 
       /*Apecoin staking*/
       const transactionData = {
-        chainId: "eip155:10",
+        chainId: "eip155:84532",
         method: "eth_sendTransaction",
         params: {
           abi: ApeTokenABI,
