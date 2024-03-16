@@ -1,4 +1,4 @@
-import { ApeStakeABI } from "@/abi/ApeStake";
+import { ApeTokenABI } from "@/abi/ApeToken";
 import { storageRegistryAbi } from "../../../../abi/StorageRegistry";
 import connectDB from "@/db";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -25,12 +25,12 @@ export default async function handleExecuteQuest(
 
       /*Apecoin staking*/
       const transactionData = {
-        chainId: "1",
-        method: "depositSelfAPeCoin(uint256 _amount)",
+        chainId: "eip155:10",
+        method: "eth_sendTransaction",
         params: {
-          abi : ApeStakeABI,
-          to : "0x5954aB967Bc958940b7EB73ee84797Dc8a2AFbb9",
-          //data : "",
+          abi : ApeTokenABI,
+          to : "0x01e61008f78a83e0dabd2fbd7ef81b64cdd2e1f4",
+          data : "",
           value : "1000000000000000000",
         }
       };
