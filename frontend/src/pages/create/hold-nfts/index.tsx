@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <h1>Create your frame</h1>
-      <FrameBuilder step="template-selection" />
+      <FrameBuilder step="nfts" />
     </>
   );
 }

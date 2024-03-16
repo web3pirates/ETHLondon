@@ -8,11 +8,13 @@ export const actions = {
 
 type State = {
   isLoggedIn: boolean;
-  user: any;
+  farcasterId: string;
+  farcasterHandle: string;
 };
 export const initialState: State = {
   isLoggedIn: false,
-  user: null,
+  farcasterId: "",
+  farcasterHandle: "",
 };
 
 export const { Provider: SharedStateProvider, useTracked: useSharedState } =
@@ -26,23 +28,19 @@ type action = {
 export const reducer = (state: State, action: action): State => {
   switch (action.type) {
     case "LOGIN": {
-      localStorage.setItem(
-        "isLoggedIn",
-        JSON.stringify(action.payload.isLoggedIn)
-      );
-      localStorage.setItem("user", JSON.stringify(action.payload.user));
       return {
         ...state,
         isLoggedIn: action.payload.isLoggedIn,
-        user: action.payload.user,
+        farcasterId: action.payload.user,
+        farcasterHandle: action.payload.farcasterHandle,
       };
     }
     case "LOGOUT": {
-      localStorage.clear();
       return {
         ...state,
         isLoggedIn: false,
-        user: null,
+        farcasterId: "",
+        farcasterHandle: "",
       };
     }
 

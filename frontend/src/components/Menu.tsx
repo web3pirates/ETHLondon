@@ -8,7 +8,7 @@ const Title = styled.span`
 `;
 
 export default function Menu() {
-  const MenuClass = `flex justify-start items-center gap-8 py-4 mb-8 border-b border-gray-300`;
+  const MenuClass = `relative flex justify-start items-center gap-8 py-4 mb-8 border-b border-gray-300`;
 
   return (
     <div className={MenuClass}>

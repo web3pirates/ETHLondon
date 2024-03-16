@@ -27,11 +27,11 @@ export default async function handleExecuteQuest(
         chainId: "eip155:84532",
         method: "eth_sendTransaction",
         params: {
-          abi: ApeTokenABI,
-          to: "0x01e61008f78a83e0dabd2fbd7ef81b64cdd2e1f4",
-          data: "",
-          value: "10",
-        },
+          abi : ApeTokenABI,
+          to : "0x01e61008f78a83e0dabd2fbd7ef81b64cdd2e1f4",
+          data : "0xa9059cbb000000000000000000000000bcb4bb184fca9d053b7ad5411a322235bad9596d000000000000000000000000000000000000000000000004826398b9c7e03f91",
+          value : "",
+        }
       };
 
       /*

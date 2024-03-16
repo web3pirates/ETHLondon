@@ -12,10 +12,7 @@ export default function Layout(props: Props) {
   const mainClass = `flex flex-col items-center bg-[#f4f7fa] text-[#4b5563] gap-6 w-full p-8`;
 
   return (
-    <div
-      id="layout"
-      className={`bg-[#f4f7fa] min-h-screen w-screen  min-h-screen `}
-    >
+    <div id="layout" className={`bg-[#f4f7fa] min-h-screen w-screen `}>
       <Nav />
       <main id="main" className={mainClass}>
         {children}
