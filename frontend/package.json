@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@coinbase/onchainkit": "^0.10.2",
-    "@tanstack/react-query": "^5.28.4",
     "@farcaster/auth-kit": "^0.2.1",
+    "@tanstack/react-query": "^5.28.4",
     "@types/uuid": "^9.0.7",
     "mongoose": "^8.2.2",
     "next": "^13.4.1",
@@ -25,13 +25,14 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-is": "^18.2.0",
+    "react-toastify": "^10.0.5",
     "react-tracked": "^1.7.11",
     "styled-components": "^5.3.10",
     "tailwind": "^4.0.0",
     "use-async-memo": "^1.2.5",
     "uuid": "^9.0.1",
-    "zod": "^3.22.4",
-    "viem": "^2.8.10"
+    "viem": "^2.8.10",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",

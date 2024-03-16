@@ -10,11 +10,9 @@ export default function Home() {
         <title>Create frame</title>
       </Head>
 
-      <Layout>
-        <h1>Create your frame</h1>
+      <h1>Create your frame</h1>
 
-        <FrameForm />
-      </Layout>
+      <FrameForm />
     </>
   );
 }
