@@ -1,4 +1,5 @@
 import { storageRegistryAbi } from "../../../../abi/StorageRegistry";
+import connectDB from "@/db";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 // Adjust the import path as necessary
@@ -8,6 +9,7 @@ export default async function handleExecuteQuest(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  await connectDB();
   try {
     const { id } = req.query; // In Next.js API routes, path parameters are accessed via req.query
 
