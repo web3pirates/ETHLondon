@@ -1,16 +1,16 @@
 import express, { Request, Response } from "express";
-import { handleFarcasterLogin } from "./controller";
-import { farcasterLoginSchema } from "./schemas";
+import { handleCreateQuest, handleFarcasterLogin } from "./controller";
+import { createQuestSchema, farcasterLoginSchema } from "./schemas";
 import { validate } from "./middleware";
 import connectDB from "./db";
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 connectDB();
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, TypeScript with Express!");
+  res.send("Frame&Chips Backend is working!");
 });
 
 app.listen(PORT, () => {
@@ -23,4 +23,6 @@ app.post(
   handleFarcasterLogin
 );
 
-// app.post("/quest", validate(createQuestSchema), handleCreateQuest);
+app.post("/quest", validate(createQuestSchema), handleCreateQuest);
+
+app.post("/quest/:id/execute", handleExecuteQuest);

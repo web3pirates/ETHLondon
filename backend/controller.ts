@@ -1,9 +1,66 @@
 import { Request, Response } from "express";
+import User from "./models/user";
+import Quest from "./models/quest";
 
-export const handleFarcasterLogin = (req: Request, res: Response): void => {
-  const { name, email } = req.body;
+export async function handleFarcasterLogin(req: Request, res: Response) {
+  try {
+    const { farcasterId } = req.body;
 
-  console.log({ name, email });
+    const alreadyExisting = await User.findOne({ farcasterId });
 
-  res.status(200).send({ message: "Successfully logged in" });
-};
+    if (alreadyExisting) {
+      return res.status(400).send("User already exists");
+    }
+
+    const user = await User.create(req.body);
+    res.json(user);
+  } catch (error: any) {
+    res.status(400).send(error.message);
+  }
+}
+
+export async function handleCreateQuest(req: Request, res: Response) {
+  try {
+    const { owner } = req.body;
+
+    const user = await User.findOne({ farcasterId: owner });
+
+    if (!user) {
+      return res.status(400).send("User does not exist");
+    }
+
+    const quest = await Quest.create(req.body);
+    res.json(quest);
+  } catch (error: any) {
+    res
+      .status(400)
+      .send(
+        error.message ||
+          "An error occurred while creating the quest, please try again"
+      );
+  }
+}
+
+export async function handleExecuteQuest(req: Request, res: Response) {
+  try {
+    const { id } = req.params;
+
+    const quest = await Quest.findById(id);
+
+    if (!quest) {
+      return res.status(400).send("Quest does not exist");
+    }
+
+    const transactionData = {};
+
+    // Execute the quest
+    res.json(transactionData);
+  } catch (error: any) {
+    res
+      .status(400)
+      .send(
+        error.message ||
+          "An error occurred while executing the quest, please try again"
+      );
+  }
+}
