@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import User from "./models/user";
 import Quest from "./models/quest";
+import { storageRegistryAbi } from "./abi/StorageRegistry";
 
 export async function handleFarcasterLogin(req: Request, res: Response) {
   try {
@@ -45,13 +46,22 @@ export async function handleExecuteQuest(req: Request, res: Response) {
   try {
     const { id } = req.params;
 
-    const quest = await Quest.findById(id);
+    // const quest = await Quest.findById(id);
 
-    if (!quest) {
-      return res.status(400).send("Quest does not exist");
-    }
+    // if (!quest) {
+    //   return res.status(400).send("Quest does not exist");
+    // }
 
-    const transactionData = {};
+    const transactionData = {
+      chainId: "eip155:10",
+      method: "eth_sendTransaction",
+      params: {
+        abi: storageRegistryAbi, // JSON ABI of the function selector and any errors
+        to: "0x00000000fcCe7f938e7aE6D3c335bD6a1a7c593D",
+        data: "0x783a112b0000000000000000000000000000000000000000000000000000000000000e250000000000000000000000000000000000000000000000000000000000000001",
+        value: "984316556204476",
+      },
+    };
 
     // Execute the quest
     res.json(transactionData);
