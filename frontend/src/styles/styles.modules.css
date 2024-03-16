@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .navbar {
@@ -79,12 +79,11 @@
   display: grid;
   place-content: center;
   background-color: white;
-  background-image: url('/wallpaper.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hiddenDiv {
