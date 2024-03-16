@@ -16,9 +16,7 @@ export default async function handler(
       <meta property="fc:frame:button:1" content="Apecoin website">
       <meta property="fc:frame:button:1:action" content="link">
       <meta property="fc:frame:button:1:target" content="https://apecoin.com/">
-      <meta property="fc:frame:button:2" content="Verify">
-      <meta property="fc:frame:button:2:action" content="post_redirect">
-      <meta property="fc:frame:button:3" content="Go back">
+      <meta property="fc:frame:button:2" content="Go back">
       </head>
     </html>
 `);
