@@ -11,7 +11,7 @@ export default async function handleExecuteQuest(
 ) {
   console.log("hi there");
   if (req.method === "POST") {
-    await connectDB();
+    //await connectDB();
     try {
       const { id } = req.query; // In Next.js API routes, path parameters are accessed via req.query
 
