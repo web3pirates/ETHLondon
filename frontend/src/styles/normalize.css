@@ -107,7 +107,6 @@ summary {
   display: list-item;
 }
 
-/* https://tailwindcss.com/docs/preflight | Modified */
 textarea {
   resize: vertical;
 }
@@ -160,7 +159,6 @@ video {
   height: auto;
 }
 
-/* https://piccalil.li/blog/a-modern-css-reset | Modified */
 blockquote,
 body,
 dd,
