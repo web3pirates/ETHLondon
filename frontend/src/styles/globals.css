@@ -1,9 +1,8 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@import "./normalize.scss";
-@import "./globals.scss";
+@import "./normalize.css";
+@import "./styles.modules.css";
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -33,3 +32,5 @@ h3 {
 h4 {
   font-size: 1.25rem;
 }
+
+@tailwind utilities;

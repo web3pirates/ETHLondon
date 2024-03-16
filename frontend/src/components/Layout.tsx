@@ -9,29 +9,17 @@ interface Props {
 export default function Layout(props: Props) {
   const { children } = props;
 
+  const mainClass = `flex flex-col items-center justify-between bg-[#f4f7fa] text-[#4b5563] gap-6 w-full min-h-screen p-8`;
+
   return (
     <div
       id="layout"
       className={`bg-[#f4f7fa] min-h-screen w-screen overflow-x-scroll`}
     >
       <Nav />
-      <main
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          backgroundColor: "#f4f7fa",
-          color: "#4b5563",
-          gap: "3rem",
-          width: "100%",
-          padding: "2rem",
-          minHeight: "100vh",
-        }}
-      >
+      <main id="main" className={mainClass}>
         {children}
       </main>
-      <br />
       <Footer />
     </div>
   );

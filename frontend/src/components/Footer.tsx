@@ -1,13 +1,6 @@
+import Wrapper from "./Wrapper";
 import { GithubIcon } from "@/assets/icons";
 import styled from "styled-components";
-
-export const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-`;
 
 export const Links = styled.div`
   display: flex;
@@ -30,7 +23,7 @@ const Link = styled.a`
 
 export function Footer() {
   return (
-    <Wrapper>
+    <Wrapper style={{ marginBottom: 0 }}>
       <Links>
         <Link href="#" target="_blank">
           Carlo

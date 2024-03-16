@@ -1,6 +1,5 @@
-import { Footer } from "@/components/Footer";
+import FrameForm from "@/components/FrameForm";
 import Layout from "@/components/Layout";
-import { Nav } from "@/components/Nav";
 import Head from "next/head";
 import React from "react";
 
@@ -13,6 +12,8 @@ export default function Home() {
 
       <Layout>
         <h1>Create your frame</h1>
+
+        <FrameForm />
       </Layout>
     </>
   );

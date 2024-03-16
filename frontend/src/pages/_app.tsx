@@ -1,3 +1,4 @@
+import "../styles/globals.css";
 import { SharedStateProvider } from "@/utils/store";
 import PlausibleProvider from "next-plausible";
 import type { AppProps } from "next/app";

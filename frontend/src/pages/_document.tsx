@@ -9,13 +9,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta property="twitter:card" content="summary_large_image" />
-          <style>
-            {`
-              body {
-                font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-              }
-            `}
-          </style>
         </Head>
         <body>
           <Main />
