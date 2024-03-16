@@ -30,7 +30,7 @@ export default async function handleExecuteQuest(
           abi: ApeTokenABI,
           to: "0x01e61008f78a83e0dabd2fbd7ef81b64cdd2e1f4",
           data: "",
-          value: "1000000000000000000",
+          value: "10",
         },
       };
 
