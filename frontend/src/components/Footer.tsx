@@ -25,20 +25,20 @@ export function Footer() {
   return (
     <Wrapper style={{ bottom: 0 }}>
       <Links>
-        <Link href="#" target="_blank">
-          Carlo
+        <Link href="https://github.com/Clislabs" target="_blank">
+          Clislabs
         </Link>
-        <Link href="#" target="_blank">
-          Christian
+        <Link href="https://github.com/Knos01" target="_blank">
+          Knos01
         </Link>
-        <Link href="#" target="_blank">
-          Michele
+        <Link href="https://github.com/MicheleSottocasa" target="_blank">
+          MicheleSottocasa
         </Link>
-        <Link href="#" target="_blank">
-          Riccardo
+        <Link href="https://github.com/Riksa011" target="_blank">
+          Riksa011
         </Link>
-        <Link href="#" target="_blank">
-          Silvio
+        <Link href="https://github.com/SBfin" target="_blank">
+          SBfin
         </Link>
       </Links>
 
