@@ -39,34 +39,31 @@ export default function Page() {
         <FrameMetadata
           buttons={[
             {
-              label: "Send tx",
-              action: "tx",
-              target: `${process.env.NEXT_PUBLIC_URL}/api/quest/1/execute`,
-            },
-            {
+              label: "Complete task link",
               action: "link",
-              label: "Link to Google",
-              target: "https://www.google.com",
+              target: "https://uniswap.org",
             },
             {
               action: "post_redirect",
-              label: "Redirect to cute pictures",
+              label: "Verify",
+            },
+            {
+              action: "link",
+              label: "Link to project website",
+              target: "https://www.google.com",
             },
           ]}
           image={{
             src: "https://zizzamia.xyz/park-3.png",
             aspectRatio: "1:1",
           }}
-          input={{
-            text: "Tell me a boat story",
-          }}
           state={{
             counter: 1,
           }}
-          postUrl="https://zizzamia.xyz/api/frame"
+          postUrl="http://localhost:3001/api/leaderboard"
         />
       </Head>
-      My cool frame
+      My cool frame id
     </>
   );
 }
