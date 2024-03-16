@@ -8,7 +8,7 @@ interface Props {
 
 export default function XPSelector(props: Props) {
   const { titleText } = props;
-  const [selectedXpBox, setSelectedXpBox] = useState<number>(-1);
+  const [selectedXpBox, setSelectedXpBox] = useState<number>(1);
 
   return (
     <div className="w-[944px] h-[81px] flex-col justify-start items-start gap-[15px] inline-flex mt-8">
