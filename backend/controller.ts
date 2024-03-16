@@ -5,5 +5,5 @@ export const handleFarcasterLogin = (req: Request, res: Response): void => {
 
   console.log({ name, email });
 
-  res.status(200).send({ message: "Login ricevuto con successo" });
+  res.status(200).send({ message: "Successfully logged in" });
 };
