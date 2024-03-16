@@ -1,16 +1,17 @@
 import Cards from "./Cards";
+import FrameForm from "./FrameForm";
 import Trashcan from "@/assets/icons/Trashcan";
 import React from "react";
 
 interface Props {
-  step?: string;
+  step?: "template-selection" | "on-chain" | "nouns" | "erc20" | "nfts";
 }
 
 export default function TemplateSelection(props: Props) {
   const { step = "template-selection" } = props;
   return (
     <div
-      className="bg-[#02367d] border-yello-500 rounded-lg mt-4 p-8 text-white"
+      className="bg-[#011445] border-yello-500 rounded-lg mt-4 p-8 text-white"
       style={{ width: "1000px", minHeight: "50vh" }}
     >
       <div className="flex justify-between">
@@ -25,7 +26,10 @@ export default function TemplateSelection(props: Props) {
       </div>
 
       {step === "template-selection" && <Cards />}
-      {step === "create-on-chain-event" && <h1>Chain</h1>}
+      {step === "on-chain" && <FrameForm type="ON-CHAIN" />}
+      {step === "nouns" && <FrameForm type="NOUNS" />}
+      {step === "erc20" && <FrameForm type="ERC20" />}
+      {step === "nfts" && <FrameForm type="NFTS" />}
     </div>
   );
 }

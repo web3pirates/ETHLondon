@@ -37,7 +37,7 @@ export default function Cards(props: Props) {
     <>
       <div className="mt-8 p-4 flex justify-center &{calssName}">
         <div className="grid grid-rows-2 grid-flow-col gap-8">
-          {_CARDS.map((card, index) => (
+          {_CARDS.map((card) => (
             <Link
               className="border-2 border-[#ffcc33] rounded-lg"
               href={card.link}
