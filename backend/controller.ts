@@ -21,9 +21,9 @@ export async function handleFarcasterLogin(req: Request, res: Response) {
 
 export async function handleCreateQuest(req: Request, res: Response) {
   try {
-    const { farcasterId } = req.body;
+    const { owner } = req.body;
 
-    const user = await User.findOne({ farcasterId });
+    const user = await User.findOne({ farcasterId: owner });
 
     if (!user) {
       return res.status(400).send("User does not exist");
