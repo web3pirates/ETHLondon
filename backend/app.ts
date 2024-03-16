@@ -1,18 +1,16 @@
 import express, { Request, Response } from "express";
 import {
   handleCreateQuest,
-  handleExecuteQuest,
   handleFarcasterLogin,
-} from "../frontend/src/controller";
-import {
-  createQuestSchema,
-  farcasterLoginSchema,
-} from "../frontend/src/schemas";
-import { validate } from "../frontend/src/middleware";
-import connectDB from "../frontend/src/db";
+  handleExecuteQuest,
+} from "./controller";
+import { createQuestSchema, farcasterLoginSchema } from "./schemas";
+import { validate } from "./middleware";
+import connectDB from "./db";
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+app.use(express.json());
 
 connectDB();
 
@@ -25,7 +23,7 @@ app.listen(PORT, () => {
 });
 
 app.post(
-  "farcaster-login",
+  "/farcaster-login",
   validate(farcasterLoginSchema),
   handleFarcasterLogin
 );

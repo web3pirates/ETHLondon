@@ -14,6 +14,7 @@
   "dependencies": {
     "@coinbase/onchainkit": "^0.10.2",
     "@tanstack/react-query": "^5.28.4",
+    "@farcaster/auth-kit": "^0.2.1",
     "@types/uuid": "^9.0.7",
     "mongoose": "^8.2.2",
     "next": "^13.4.1",
@@ -29,8 +30,8 @@
     "tailwind": "^4.0.0",
     "use-async-memo": "^1.2.5",
     "uuid": "^9.0.1",
-    "viem": "^1.5.3",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "viem": "^2.8.10"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
