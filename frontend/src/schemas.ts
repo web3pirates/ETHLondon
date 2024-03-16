@@ -1,5 +1,5 @@
-import { z } from "zod";
 import Quest, { QuestTemplate } from "./models/quest";
+import { z } from "zod";
 
 export const farcasterLoginSchema = z.object({
   name: z.string().min(1, "Name is required"),
