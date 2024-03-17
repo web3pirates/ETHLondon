@@ -41,7 +41,7 @@ export default function Home() {
 
           <div
             onClick={copyLink}
-            className="flex w-[138px] h-[43px] px-5 py-3 hover:cursor-pointer rounded-lg border-[#ffcc33] border-2 bg-[#002970] justify-between items-center gap-2"
+            className="flex w-[150px] h-[43px] px-5 py-3 hover:cursor-pointer rounded-lg border-[#ffcc33] border-2 bg-[#002970] justify-between items-center gap-2"
           >
             <div className="text-[#ffcc33] text-base fleading-tight justify-center">
               Copy link
