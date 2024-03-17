@@ -13,14 +13,14 @@ const _CARDS = [
     title: "STAKE APECOIN",
     description:
       "Customize the quest with an on chain event. Users will stkae ApeCoin directly on Warpcast",
-    logo: <Image src={apecoin} alt="chain" width={100} height={100} />,
+    logo: <Image src={apecoin} alt="chain" width={75} height={75} />,
     link: "/create/hold-nfts",
   },
   {
-    title: "MINIMUM ERC20 BALANCE",
+    title: "MINIMUM ERC20",
     description:
       "Customize the quest to verify if users hold a minimum ERC20 balance",
-    logo: <Image src={usdc} alt="chain" width={100} height={100} />,
+    logo: <Image src={usdc} alt="chain" width={75} height={75} />,
     link: "/create/minimum-erc20-balance",
   },
   {
@@ -31,8 +31,8 @@ const _CARDS = [
       <Image
         src={chain}
         alt="chain"
-        width={100}
-        height={100}
+        width={75}
+        height={75}
         className="rounded-full"
       />
     ),
@@ -41,8 +41,9 @@ const _CARDS = [
   {
     title: "HOLD NFT",
     description: "Customize the quest to verify if users hold a specific NFT",
-    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
     link: "/create/nouns-bid",
+
+    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
   },
 ];
 
