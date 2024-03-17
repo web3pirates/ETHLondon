@@ -21,7 +21,7 @@ export default function Home() {
 
           <div className="mt-6">
             <Image
-              src={Farcaster}
+              src={"https://framenchips.s3.eu-west-1.amazonaws.com/logo.png"}
               alt="Farcaster Logo"
               width={250}
               height={250}
@@ -79,6 +79,13 @@ export default function Home() {
               leverages the Farcaster protocol to create a decentralized frame
               marketplace.
             </p>
+            <Image
+              src={Farcaster}
+              alt="Farcaster Logo"
+              width={150}
+              height={150}
+              className="rounded-full mx-auto mt-6"
+            />
           </div>
         </main>
       </div>
