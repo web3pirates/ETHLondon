@@ -9,7 +9,6 @@ export default function Home() {
         <title>Create frame</title>
       </Head>
 
-      <h1>Create your frame</h1>
       <FrameBuilder step="on-chain" />
     </>
   );
