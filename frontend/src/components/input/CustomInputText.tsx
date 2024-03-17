@@ -17,7 +17,7 @@ export default function CustomInput(props: Props) {
           <input
             type="text"
             placeholder={value}
-            className="grow shrink basis-0 text-slate-400 text-sm font-normal font-['Wix Madefor Display'] leading-[17.50px]"
+            className="grow shrink basis-0 text-white text-sm font-normal font-['Wix Madefor Display'] leading-[17.50px] focus:outline-none"
             style={{ backgroundColor: "transparent" }}
           />
         </div>

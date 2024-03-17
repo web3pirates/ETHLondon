@@ -1,6 +1,8 @@
 import CustomInput from "../input/CustomtInput";
 import XPSelector from "../input/XPSelector";
 import React, { useState } from "react";
+import base from '../../../public/images/base.png'
+import Image from 'next/image'
 
 interface Props {
   type: "NOUNS" | "ON-CHAIN" | "ERC20" | "NFTS";
@@ -12,7 +14,11 @@ export default function FrameForm(props: Props) {
     <form action="" method="get">
       <div className="mt-8">
         <CustomInput type="text" value="Awesom Frame" titleText="Title" />
-        <CustomInput type="select" value="Base" titleText="Contract *" />
+        <div className="hidden"><CustomInput type="select" value="Base" titleText="Contract *" /></div>
+        <div className="grow shrink basis-0 text-indigo-200 text-xl font-semibold font-['Wix Madefor Display'] leading-normal flex mt-8 mb-[-20px]"> Base chain
+        <Image src={base} alt="chain" width={30} height={20} className="rounded-full ml-2" />
+        
+        </div>
         <CustomInput
           type="contract-checker"
           value="Contract address"

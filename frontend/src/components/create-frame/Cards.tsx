@@ -18,19 +18,19 @@ const _CARDS = [
   {
     title: "ON-CHAIN EVENTS",
     description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={chain} alt='chain' width={100} height={100} className="rounded-full"/>,
+    logo: <Image src={chain} alt='chain' width={75} height={75} className="rounded-full"/>,
     link: "/create/on-chain-event",
   },
   {
-    title: "MINIMUM ERC20 BALANCE",
+    title: "MINIMUM ERC20",
     description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={usdc} alt='chain' width={100} height={100}/>,
+    logo: <Image src={usdc} alt='chain' width={75} height={75}/>,
     link: "/create/minimum-erc20-balance",
   },
   {
     title: "HOLD NFTS",
     description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={apecoin} alt='chain' width={100} height={100}/>,
+    logo: <Image src={apecoin} alt='chain' width={75} height={75}/>,
     link: "/create/hold-nfts",
   },
 ];
