@@ -3,7 +3,6 @@ import chain from "../../../public/images/chain.png";
 import nouns from "../../../public/images/nouns2.png";
 import usdc from "../../../public/images/usdc.png";
 import TemplateCard from "./TemplateCard";
-import NounsLogo from "@/assets/icons/NounsLogo";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
