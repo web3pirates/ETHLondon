@@ -9,14 +9,23 @@ import React from "react";
 
 const _CARDS = [
   {
-    title: "NOUNS BID",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
-    link: "/create/nouns-bid",
+    title: "STAKE APECOIN",
+    description:
+      "Customize the quest with an on chain event. Users will stkae ApeCoin directly on Warpcast",
+    logo: <Image src={apecoin} alt="chain" width={75} height={75} />,
+    link: "/create/hold-nfts",
+  },
+  {
+    title: "MINIMUM ERC20",
+    description:
+      "Customize the quest to verify if users hold a minimum ERC20 balance",
+    logo: <Image src={usdc} alt="chain" width={75} height={75} />,
+    link: "/create/minimum-erc20-balance",
   },
   {
     title: "ON-CHAIN EVENTS",
-    description: "Customize the campaing with aviable tasks based on you",
+    description:
+      "Customize the quest to verify if users completed a specified on-chain event",
     logo: (
       <Image
         src={chain}
@@ -29,16 +38,11 @@ const _CARDS = [
     link: "/create/on-chain-event",
   },
   {
-    title: "MINIMUM ERC20",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={usdc} alt="chain" width={75} height={75} />,
-    link: "/create/minimum-erc20-balance",
-  },
-  {
-    title: "HOLD NFTS",
-    description: "Customize the campaing with aviable tasks based on you",
-    logo: <Image src={apecoin} alt="chain" width={75} height={75} />,
-    link: "/create/hold-nfts",
+    title: "HOLD NFT",
+    description: "Customize the quest to verify if users hold a specific NFT",
+    link: "/create/nouns-bid",
+
+    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
   },
 ];
 
@@ -50,7 +54,7 @@ export default function Cards(props: Props) {
   const { className } = props;
   return (
     <>
-      <div className="mt-8 p-4 flex justify-center &{calssName}">
+      <div className={`mt-8 p-4 flex justify-center ${className}`}>
         <div className="grid grid-rows-2 grid-flow-col gap-8">
           {_CARDS.map((card) => (
             <Link
