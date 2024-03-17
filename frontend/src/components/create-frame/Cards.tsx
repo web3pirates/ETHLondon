@@ -11,7 +11,7 @@ const _CARDS = [
   {
     title: "STAKE APECOIN",
     description:
-      "Customize the quest with an on chain event. Users will stkae ApeCoin directly on Warpcast",
+      "Customize the quest with an on chain event. Users will stake ApeCoin directly on Warpcast",
     logo: <Image src={apecoin} alt="chain" width={75} height={75} />,
     link: "/create/hold-nfts",
   },
@@ -42,7 +42,7 @@ const _CARDS = [
     description: "Customize the quest to verify if users hold a specific NFT",
     link: "/create/nouns-bid",
 
-    logo: <Image src={nouns} alt="chain" width={100} height={100} />,
+    logo: <Image src={nouns} alt="chain" width={100} height={150} />,
   },
 ];
 

@@ -25,7 +25,7 @@ export default function FrameForm(props: Props) {
   return (
     <form action="" method="get">
       <div className="mt-8">
-        <CustomInput type="text" value="Awesom Frame" titleText="Title" />
+        <CustomInput type="text" value="Awesome Frame" titleText="Title" />
         <div className="hidden">
           <CustomInput type="select" value="Base" titleText="Contract *" />
         </div>
@@ -53,10 +53,9 @@ export default function FrameForm(props: Props) {
         />
         <CustomInput
           type="image-url"
-          value="No file chosen"
+          value="Insert image URL"
           titleText="Frame Image (1.91:1) *"
         />
-        <CustomInput type="text" value="URL" titleText="Website URL *" />
         <XPSelector titleText="Provided XP points" />
         <div className="flex justify-end mt-[20px]">
           <div className="w-[158px] h-[43px] px-5 py-3 rounded-lg border-2 border-[#ffcc33] bg-[#002970] justify-center items-center gap-2 inline-flex">
@@ -64,7 +63,7 @@ export default function FrameForm(props: Props) {
               className="text-[#ffcc33] text-base fleading-tight hover:cursor-pointer"
               onClick={handleClick}
             >
-              Submint
+              Submit
             </div>
           </div>
         </div>

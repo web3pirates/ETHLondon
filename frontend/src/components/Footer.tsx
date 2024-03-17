@@ -10,20 +10,25 @@ export const Links = styled.div`
 `;
 
 const Link = styled.a`
-  color: rgba(0, 0, 0, 0.5);
+  color: #ffcc33;
   font-weight: 600;
   transition: color 0.15s ease-in-out;
 
   @media (hover: hover) {
     &:hover {
-      color: rgba(0, 0, 0, 1);
+      color: #ffcc33;
     }
   }
 `;
 
 export function Footer() {
   return (
-    <Wrapper style={{ bottom: 0 }}>
+    <Wrapper
+      style={{
+        bottom: 0,
+        backgroundColor: "#002970",
+      }}
+    >
       <Links>
         <Link href="https://github.com/Clislabs" target="_blank">
           Clislabs

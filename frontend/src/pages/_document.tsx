@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta property="twitter:card" content="summary_large_image" />
         </Head>
-        <body>
+        <body className="bg-[#002970]">
           <Main />
           <NextScript />
         </body>
